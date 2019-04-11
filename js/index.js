@@ -45,6 +45,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const navItems = document.querySelectorAll('nav a')
 navItems.forEach((el, index) => {
   el.textContent = siteContent.nav[`nav-item-${index + 1}`]
+  // [Task 3]
+  // make nav items' color green
+  el.style.color = 'green'
 })
 
 // Call-to-Action Section
@@ -111,3 +114,18 @@ contactEmail.textContent = siteContent.contact.email
 // Footer
 const footerContent = document.querySelector('footer p')
 footerContent.textContent = siteContent.footer.copyright
+
+// [Task 3]
+// Create and append/prepend new nav content
+const navbar = document.querySelector('nav')
+
+const companyNavItem = document.createElement('a')
+companyNavItem.textContent = 'Company'
+companyNavItem.style.color = 'green'
+
+const changelogNavItem = document.createElement('a')
+changelogNavItem.textContent = 'Changelog'
+changelogNavItem.style.color = 'green'
+
+navbar.prepend(companyNavItem)
+navbar.appendChild(changelogNavItem)
