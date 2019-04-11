@@ -96,10 +96,17 @@ mainSectionMiddleImage.setAttribute('src', siteContent["main-content"]["middle-i
 
 // Contact Section
 const contactTitle = document.querySelector('.contact h4')
+contactTitle.textContent = siteContent.contact["contact-h4"]
+
 const contactInfoParagraphs = document.querySelectorAll('.contact p')
 const contactAddress = contactInfoParagraphs[0]
+contactAddress.textContent = siteContent.contact.address
+
 const contactPhone = contactInfoParagraphs[1]
+contactPhone.textContent = siteContent.contact.phone
+
 const contactEmail = contactInfoParagraphs[2]
+contactEmail.textContent = siteContent.contact.email
 
 // Footer
 const footerContent = document.querySelector('footer p')
