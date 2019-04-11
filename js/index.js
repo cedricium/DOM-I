@@ -40,3 +40,92 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Navigation
+const navItems = document.querySelectorAll('nav a')
+navItems.forEach((el, index) => {
+  el.textContent = siteContent.nav[`nav-item-${index + 1}`]
+  // [Task 3]
+  // make nav items' color green
+  el.style.color = 'green'
+})
+
+// Call-to-Action Section
+const ctaHeader = document.querySelector('.cta .cta-text h1')
+ctaHeader.textContent = siteContent.cta.h1
+
+const ctaButton = document.querySelector('.cta .cta-text button')
+ctaButton.textContent = siteContent.cta.button
+
+const ctaLogo = document.getElementById('cta-img')
+ctaLogo.setAttribute('src', siteContent.cta["img-src"])
+
+// Main Content Section
+const mainSectionTitles = document.querySelectorAll('.main-content h4')
+const mainSectionContent = document.querySelectorAll('.main-content p')
+
+const featuresTitle = mainSectionTitles[0]
+featuresTitle.textContent = siteContent["main-content"]["features-h4"]
+
+const featuresContent = mainSectionContent[0]
+featuresContent.textContent = siteContent["main-content"]["features-content"]
+
+const aboutTitle = mainSectionTitles[1]
+aboutTitle.textContent = siteContent["main-content"]["about-h4"]
+
+const aboutContent = mainSectionContent[1]
+aboutContent.textContent = siteContent["main-content"]["about-content"]
+
+const servicesTitle = mainSectionTitles[2]
+servicesTitle.textContent = siteContent["main-content"]["services-h4"]
+
+const servicesContent = mainSectionContent[2]
+servicesContent.textContent = siteContent["main-content"]["services-content"]
+
+const productTitle = mainSectionTitles[3]
+productTitle.textContent = siteContent["main-content"]["product-h4"]
+
+const productContent = mainSectionContent[3]
+productContent.textContent = siteContent["main-content"]["product-content"]
+
+const visionTitle = mainSectionTitles[4]
+visionTitle.textContent = siteContent["main-content"]["vision-h4"]
+
+const visionContent = mainSectionContent[4]
+visionContent.textContent = siteContent["main-content"]["vision-content"]
+
+const mainSectionMiddleImage = document.getElementById('middle-img')
+mainSectionMiddleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+// Contact Section
+const contactTitle = document.querySelector('.contact h4')
+contactTitle.textContent = siteContent.contact["contact-h4"]
+
+const contactInfoParagraphs = document.querySelectorAll('.contact p')
+const contactAddress = contactInfoParagraphs[0]
+contactAddress.textContent = siteContent.contact.address
+
+const contactPhone = contactInfoParagraphs[1]
+contactPhone.textContent = siteContent.contact.phone
+
+const contactEmail = contactInfoParagraphs[2]
+contactEmail.textContent = siteContent.contact.email
+
+// Footer
+const footerContent = document.querySelector('footer p')
+footerContent.textContent = siteContent.footer.copyright
+
+// [Task 3]
+// Create and append/prepend new nav content
+const navbar = document.querySelector('nav')
+
+const companyNavItem = document.createElement('a')
+companyNavItem.textContent = 'Company'
+companyNavItem.style.color = 'green'
+
+const changelogNavItem = document.createElement('a')
+changelogNavItem.textContent = 'Changelog'
+changelogNavItem.style.color = 'green'
+
+navbar.prepend(companyNavItem)
+navbar.appendChild(changelogNavItem)
