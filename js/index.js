@@ -110,3 +110,4 @@ contactEmail.textContent = siteContent.contact.email
 
 // Footer
 const footerContent = document.querySelector('footer p')
+footerContent.textContent = siteContent.footer.copyright
