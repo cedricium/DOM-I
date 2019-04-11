@@ -58,25 +58,41 @@ const ctaLogo = document.getElementById('cta-img')
 ctaLogo.setAttribute('src', siteContent.cta["img-src"])
 
 // Main Content Section
-const mainSectionTitles = document.querySelectorAll('.top-content h4')
-const mainSectionContent = document.querySelectorAll('.top-content p')
+const mainSectionTitles = document.querySelectorAll('.main-content h4')
+const mainSectionContent = document.querySelectorAll('.main-content p')
 
 const featuresTitle = mainSectionTitles[0]
+featuresTitle.textContent = siteContent["main-content"]["features-h4"]
+
 const featuresContent = mainSectionContent[0]
+featuresContent.textContent = siteContent["main-content"]["features-content"]
 
 const aboutTitle = mainSectionTitles[1]
+aboutTitle.textContent = siteContent["main-content"]["about-h4"]
+
 const aboutContent = mainSectionContent[1]
+aboutContent.textContent = siteContent["main-content"]["about-content"]
 
 const servicesTitle = mainSectionTitles[2]
+servicesTitle.textContent = siteContent["main-content"]["services-h4"]
+
 const servicesContent = mainSectionContent[2]
+servicesContent.textContent = siteContent["main-content"]["services-content"]
 
 const productTitle = mainSectionTitles[3]
+productTitle.textContent = siteContent["main-content"]["product-h4"]
+
 const productContent = mainSectionContent[3]
+productContent.textContent = siteContent["main-content"]["product-content"]
 
 const visionTitle = mainSectionTitles[4]
+visionTitle.textContent = siteContent["main-content"]["vision-h4"]
+
 const visionContent = mainSectionContent[4]
+visionContent.textContent = siteContent["main-content"]["vision-content"]
 
 const mainSectionMiddleImage = document.getElementById('middle-img')
+mainSectionMiddleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 // Contact Section
 const contactTitle = document.querySelector('.contact h4')
